@@ -1,0 +1,11 @@
+.decoLinesContainer{
+    border: 1px solid black;
+    min-width: 10%;
+    min-height: 100vh;
+}
+.decoLinesContainer > span{
+    width: 20px;
+    min-height: 100vh;
+    border: 1px solid #7879F1;
+    background: #7879F1;
+}
