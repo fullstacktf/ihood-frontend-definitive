@@ -136,7 +136,7 @@ const Login = () => {
         </div>
         <div className={styles.inputs}>
             {/* error={state.isError} */}
-            <input type="text" className="username" placeholder="/f007;  Nombre" />
+            <input type="text" className="username" placeholder="&#xf007;  Nombre" />
 {/* onChange={handleUsernameChange} */}
             <input type="email" className="email" placeholder="Email" />
 {/* onChange={handleEmailChange} */}
