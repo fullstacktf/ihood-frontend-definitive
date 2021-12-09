@@ -85,7 +85,7 @@ const Form = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    if (state.username.trim() && state.email.trim() && state.phoneNumber && state.password.trim()) {
+    if (state.username.trim() && state.email.trim() && state.password.trim()) {
       dispatch({
         type: 'setIsButtonDisabled',
         payload: false
@@ -96,7 +96,7 @@ const Form = () => {
         payload: true
       });
     }
-  }, [state.username, state.password, state.email, state.phoneNumber]);
+  }, [state.username, state.password, state.email]);
 
   const handleLogin = () => {
     if (state.username === 'username' && state.email === 'name@sample.com' && state.phoneNumber === 675789876 && state.password === 'password') {
@@ -157,13 +157,13 @@ const Form = () => {
         <div className={styles.inputs}>
             {/* error={state.isError} 
             helperText={state.helperText}*/}
-            <input type="text" className="username" placeholder="&#xf007;  Nombre" onChange={handleUsernameChange} onKeyPress={handleKeyPress}/>
+            <input type="text" className="username" placeholder="&#xf007;  Nombre" onChange={handleUsernameChange} onKeyPress={handleKeyPress} required/>
 
-            <input type="email" className="email" placeholder="Email" onChange={handleEmailChange} onKeyPress={handleKeyPress}/>
+            <input type="email" className="email" placeholder="Email" onChange={handleEmailChange} onKeyPress={handleKeyPress} required/>
 
             <input type="tel" className="movil" placeholder="Telefono" onKeyPress={handleKeyPress}/>
 {/* onChange={handlePhoneNumberChange} */}
-            <input type="password" className="password" placeholder="Password" onChange={handlePasswordChange} onKeyPress={handleKeyPress}/>
+            <input type="password" className="password" placeholder="Password" onChange={handlePasswordChange} onKeyPress={handleKeyPress} required/>
 
             <button className={styles.loginBtn} onClick={handleLogin} disabled={state.isButtonDisabled}>Registrate</button>
         </div>
