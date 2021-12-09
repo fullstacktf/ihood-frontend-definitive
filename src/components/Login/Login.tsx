@@ -1,6 +1,6 @@
 import styles from './Login.module.css';
-import Form from './Form'
-import DecoHLines from './DecoHLines';
+import Form from '../Login/Form'
+import DecoHLines from '../Login/DecoHLines';
 
 const Login = () => {
   return (
