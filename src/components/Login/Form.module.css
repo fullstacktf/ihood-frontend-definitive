@@ -56,11 +56,16 @@
   text-decoration: inherit;
 }
 
-.inputs > input {
+input {
   border-radius: 20px;
   border: 1px solid #5152C3;
   background: #FFF8F5;
   padding: 8px;
+}
+
+input:focus{
+  border: 1px solid #5152C3;
+  outline: none;
 }
 
 .loginBtn {
@@ -74,4 +79,9 @@
   border-radius: 20px;
   border: none;
   background: #F9E9E3;
+}
+
+button:disabled{
+  color: #6d6da0;
+  background: #b4b4b4;
 }
