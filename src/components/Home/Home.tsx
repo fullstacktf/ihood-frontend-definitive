@@ -1,6 +1,6 @@
 import styles from './Home.module.css';
 import { Icon } from '@iconify/react';
-import DecoVLines from './DecoVLines';
+import DecoVLines from '../Home/DecoVLines';
 
 
 const Home = () => {
