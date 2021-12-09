@@ -1,6 +1,7 @@
 import React, { useReducer, useEffect } from 'react';
 import styles from './Login.module.css';
-import { Icon } from '@iconify/react'
+import { Icon } from '@iconify/react';
+import DecoHLines from './DecoHLines';
 
 //state type
 
@@ -147,6 +148,7 @@ const Login = () => {
             <button className={styles.loginBtn} onClick={handleLogin}>Registrate</button>
         </div>
       </div>
+      <DecoHLines />
     </form>
   );
 }
