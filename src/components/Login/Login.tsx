@@ -1,12 +1,14 @@
 import styles from './Login.module.css';
-import Form from '../Login/Form'
-import DecoHLines from '../Login/DecoHLines';
+import Form from './Form'
+import DecoHLines from './DecoHLines';
+import Footer from './Footer';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   return (
     <div className={styles.formlogin}>
-      <Form />
+      <Form onLogin={onLogin}/>
       <DecoHLines />
+      <Footer />
     </div>
   );
 }
