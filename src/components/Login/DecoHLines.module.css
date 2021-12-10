@@ -5,10 +5,9 @@
     /* border: 1px solid black; */
     min-width: 100%;
     min-height: 8vh;
-    margin-top: 50%;
 }
 .decoLinesContainer > div{
-    min-width: 100%;
+    min-width: 70%;
     border: 1px solid #E9E9F9;
     background: #E9E9F9;
     border-radius: 15px;
