@@ -1,0 +1,30 @@
+.decoLinesContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    /* border: 1px solid black; */
+    min-width: 8%;
+    min-height: 100vh;
+}
+.decoLinesContainer > div{
+    height: 100vh;
+    border: 1px solid #7879F1;
+    background: #7879F1;
+    border-radius: 15px;
+}
+
+.decoLine1 {
+    width: 2%;
+    }
+.decoLine2 {
+    width: 4%;
+    }
+.decoLine3 {
+    width: 6%;
+    }
+.decoLine4 {
+    width: 8%;
+    }
+.decoLine5 {
+    width: 10%;
+    }
