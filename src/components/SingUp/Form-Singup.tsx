@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect } from 'react';
-import styles from './Form.module.css';
+import styles from './Form-Singup.module.css';
 import { Icon } from '@iconify/react';
 import CheckMasterRole from './CheckRole';
 
@@ -30,8 +30,8 @@ type Action = { type: 'setUsername', payload: string }
     | { type: 'setPhoneNumber', payload: number }
     | { type: 'setPassword', payload: string } 
     | { type: 'setIsButtonDisabled', payload: boolean } 
-    | { type: 'loginSuccess', payload: string } 
-    | { type: 'loginFailed', payload: string } 
+    | { type: 'singupSuccess', payload: string } 
+    | { type: 'singupFailed', payload: string } 
     | { type: 'setIsError', payload: boolean };
 
 const reducer = (state: State, action: Action)  => {
@@ -61,13 +61,13 @@ const reducer = (state: State, action: Action)  => {
               ...state,
               isButtonDisabled: action.payload
         };
-        case 'loginSuccess': 
+        case 'singupSuccess': 
           return {
               ...state,
               helperText: action.payload,
               isError: false
         };
-        case 'loginFailed': 
+        case 'singupFailed': 
           return {
               ...state,
               helperText: action.payload,
@@ -82,7 +82,7 @@ const reducer = (state: State, action: Action)  => {
 }
 
 
-const Form = ({onLogin}) => {
+const FormSingUp = ({onSingup}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -99,16 +99,16 @@ const Form = ({onLogin}) => {
     }
   }, [state.username, state.password, state.email]);
 
-  const handleLogin = () => {
-    onLogin({name:"", email: "", password: "",checked:true})
+  const handleSingup = () => {
+    onSingup({name:"", email: "", password: "",checked:true})
     if (state.username === 'username' && state.email === 'name@sample.com' && state.phoneNumber === 675789876 && state.password === 'password') {
       dispatch({
-        type: 'loginSuccess',
-        payload: 'Login Successfully'
+        type: 'singupSuccess',
+        payload: 'SingUp Successfully'
       });
     } else {
       dispatch({
-        type: 'loginFailed',
+        type: 'singupFailed',
         payload: 'Incorrect username or password'
       });
     }
@@ -116,7 +116,7 @@ const Form = ({onLogin}) => {
 
   const handleKeyPress = (event: React.KeyboardEvent) => {
     if (event.keyCode === 13 || event.which === 13) {
-      state.isButtonDisabled || handleLogin();
+      state.isButtonDisabled || handleSingup();
     }
   };
 
@@ -149,7 +149,7 @@ const Form = ({onLogin}) => {
     }
 
   return (
-      <div className={styles.loginContainer}>
+      <div className={styles.signupContainer}>
         <div className={styles.langNav} ></div>
         <form className={styles.inputContainer} noValidate autoComplete="off">
           <div className={styles.titleBox}> 
@@ -167,7 +167,7 @@ const Form = ({onLogin}) => {
   {/* onChange={handlePhoneNumberChange} */}
               <input type="password" className="password" placeholder="Password" onChange={handlePasswordChange} onKeyPress={handleKeyPress} required/>
 
-              <button className={styles.loginBtn} onClick={handleLogin} disabled={state.isButtonDisabled}>Registrate</button>
+              <button className={styles.loginBtn} onClick={handleSingup} disabled={state.isButtonDisabled}>Registrate</button>
           </div>
         </form>
         <CheckMasterRole /*onCheck={onCheck}*//>
@@ -175,4 +175,4 @@ const Form = ({onLogin}) => {
   );
 }
 
-export default Form;
+export default FormSingUp;

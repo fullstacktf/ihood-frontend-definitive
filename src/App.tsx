@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Home from './components/Home/Home';
-import Login from './components/Login/Login';
+import SingUp from './components/SingUp/SingUp';
 
 interface User {
   nombre: string;
@@ -19,7 +19,7 @@ function App() {
       return (
         <div className="App">
           <Home />
-          <Login onLogin={setUser}/>
+          <SingUp onSingup={setUser}/>
         </div>
       )
     }
