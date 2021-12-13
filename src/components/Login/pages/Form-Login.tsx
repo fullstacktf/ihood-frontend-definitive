@@ -9,7 +9,7 @@ import { Icon } from '@iconify/react';
 const baseUrl="http://localhost:3001/usuarios";
 const cookies = new Cookies();
 
-class Login extends Component {
+class FormLogin extends Component {
     state={
         form:{
             username: '',
@@ -143,4 +143,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default FormLogin;
