@@ -12,6 +12,16 @@ interface User {
   checked: boolean
 }
 
+interface User {
+  nombre: string;
+  email: string;
+  password: string;
+  community_id?: number;
+  role_id: number;
+  checked: boolean
+}
+
+
 function App() {
   const[user,setUser] = useState<User>()
     if (!user) {
