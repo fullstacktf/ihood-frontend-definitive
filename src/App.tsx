@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import Home from './components/Home/Home';
-import SingUp from './components/SingUp/SingUp';
+import HomeSignup from './components/Home/HomeSignup';
+// import HomeLog from './components/Home/HomeLog';
 
 interface User {
   nombre: string;
@@ -18,12 +18,12 @@ function App() {
     if (!user) {
       return (
         <div className="App">
-          <Home />
-          <SingUp onSingup={setUser}/>
+          <HomeSignup onSignup={setUser}/>
+          {/* <HomeLog /> */}
         </div>
       )
     }
-    if(!user.community_id && user.checked) {
+    if(!user.community_id && user.checked === true) {
       return (
         <div className="App">
           <h1>Create-Community-Profile</h1>
