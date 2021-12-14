@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import HomeSignup from './components/Home/HomeSignup';
+import HomeSignup from './components/Home/HomeSingup';
 // import HomeLog from './components/Home/HomeLog';
-
-interface User {
-  nombre: string;
-  email: string;
-  password: string;
-  community_id?: number;
-  role_id: number;
-  checked: boolean
-}
 
 interface User {
   nombre: string;
