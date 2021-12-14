@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import styles from './TextCarousel.module.css';
+import styles from './css/TextCarousel.module.css';
 
 class TextCarousel extends Component {
     render() {
