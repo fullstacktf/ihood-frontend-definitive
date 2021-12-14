@@ -8,8 +8,8 @@ body{
     justify-content:space-between;
     align-items: center;
     flex-direction: row;
-    width: 80%;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 100%;
     margin: auto;
 }
 
@@ -18,7 +18,7 @@ body{
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 75%;
     min-height: 100vh;
     margin: auto;
 }
@@ -41,4 +41,44 @@ body{
     font-weight: bold;
     text-align: center;
     color: #5152C3;
+}
+.decoLinesContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    /* border: 1px solid black; */
+    min-width: 8%;
+    min-height: 100vh;
+}
+.decoLinesContainer > div{
+    height: 100vh;
+    border: 1px solid #7879F1;
+    background: #7879F1;
+    border-radius: 15px;
+}
+
+.decoLine1 {
+    width: 2%;
+    }
+.decoLine2 {
+    width: 4%;
+    }
+.decoLine3 {
+    width: 6%;
+    }
+.decoLine4 {
+    width: 8%;
+    }
+.decoLine5 {
+    width: 10%;
+    }
+
+.signupContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 25%;
+    min-height: 100vh;
+    background: linear-gradient(#A5A6F6 60%, #bcbdfc 70%, #E9E9F9 85%);
+    justify-content:space-between;
 }

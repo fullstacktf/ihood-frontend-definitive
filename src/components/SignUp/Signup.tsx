@@ -1,7 +1,8 @@
 import React, { useReducer, useEffect } from 'react';
-import styles from './Form.module.css';
+import styles from './css/Signup.module.css';
 import { Icon } from '@iconify/react';
 import CheckMasterRole from './CheckRole';
+import Footer from './Footer';
 
 //state type
 
@@ -30,8 +31,8 @@ type Action = { type: 'setUsername', payload: string }
     | { type: 'setPhoneNumber', payload: number }
     | { type: 'setPassword', payload: string } 
     | { type: 'setIsButtonDisabled', payload: boolean } 
-    | { type: 'loginSuccess', payload: string } 
-    | { type: 'loginFailed', payload: string } 
+    | { type: 'signupSuccess', payload: string } 
+    | { type: 'signupFailed', payload: string } 
     | { type: 'setIsError', payload: boolean };
 
 const reducer = (state: State, action: Action)  => {
@@ -61,13 +62,13 @@ const reducer = (state: State, action: Action)  => {
               ...state,
               isButtonDisabled: action.payload
         };
-        case 'loginSuccess': 
+        case 'signupSuccess': 
           return {
               ...state,
               helperText: action.payload,
               isError: false
         };
-        case 'loginFailed': 
+        case 'signupFailed': 
           return {
               ...state,
               helperText: action.payload,
@@ -82,7 +83,7 @@ const reducer = (state: State, action: Action)  => {
 }
 
 
-const Form = ({onLogin}) => {
+const SignUp = ({onSignup}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -99,16 +100,16 @@ const Form = ({onLogin}) => {
     }
   }, [state.username, state.password, state.email]);
 
-  const handleLogin = () => {
-    onLogin({name:"", email: "", password: "",checked:true})
+  const handleSignup = () => {
+    onSignup({name:"", email: "", password: "", checked:true})
     if (state.username === 'username' && state.email === 'name@sample.com' && state.phoneNumber === 675789876 && state.password === 'password') {
       dispatch({
-        type: 'loginSuccess',
-        payload: 'Login Successfully'
+        type: 'signupSuccess',
+        payload: 'SignUp Successfully'
       });
     } else {
       dispatch({
-        type: 'loginFailed',
+        type: 'signupFailed',
         payload: 'Incorrect username or password'
       });
     }
@@ -116,7 +117,7 @@ const Form = ({onLogin}) => {
 
   const handleKeyPress = (event: React.KeyboardEvent) => {
     if (event.keyCode === 13 || event.which === 13) {
-      state.isButtonDisabled || handleLogin();
+      state.isButtonDisabled || handleSignup();
     }
   };
 
@@ -149,8 +150,11 @@ const Form = ({onLogin}) => {
     }
 
   return (
-      <div className={styles.loginContainer}>
-        <div className={styles.langNav} ></div>
+      <div className={styles.signupContainer}>
+        <div className={styles.langNav} >
+          <Icon className={styles.flag} icon="emojione:flag-for-spain" />
+          <Icon className={styles.flag} icon="emojione:flag-for-united-kingdom" />
+        </div>
         <form className={styles.inputContainer} noValidate autoComplete="off">
           <div className={styles.titleBox}> 
           <h1 className={styles.title}>Hi, Neighbor! </h1>
@@ -167,12 +171,20 @@ const Form = ({onLogin}) => {
   {/* onChange={handlePhoneNumberChange} */}
               <input type="password" className="password" placeholder="Password" onChange={handlePasswordChange} onKeyPress={handleKeyPress} required/>
 
-              <button className={styles.loginBtn} onClick={handleLogin} disabled={state.isButtonDisabled}>Registrate</button>
+              <button className={styles.loginBtn} onClick={handleSignup} disabled={state.isButtonDisabled}>Registrate</button>
           </div>
+          <CheckMasterRole />
         </form>
-        <CheckMasterRole /*onCheck={onCheck}*//>
+        <div className={styles.decoLinesContainer}>
+            <div className={styles.decoLine1}></div>
+            <div className={styles.decoLine2}></div>
+            <div className={styles.decoLine3}></div>
+            <div className={styles.decoLine4}></div>
+            <div className={styles.decoLine5}></div>
+        </div>
+        <Footer />
       </div>
   );
 }
 
-export default Form;
+export default SignUp;
