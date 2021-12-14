@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,800&display=swap');
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerPrincipal {
+      display: flex;
+      flex-direction: column;
+      height: 600px;
+      width: 300px;
+      background-image: linear-gradient(#A5A6F6, #c4c5fd);
+      margin: 50px auto;
+  }
+
+  /* CONTAINER TOP */
+
+  .containerTop {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #7879F1;
+    width: 300px;
+    height: 2.5rem;
+    padding: 5px;
+  }
+
+  .flag{
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 50%;
+    border:  2px solid white;
+    margin-left: 3px;
+    margin-right: 5px;
+    padding: none;
+  }
+
+  /* CONTAINER MIDDLE */
+
+  .containerMiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+    height: 600px;
+  }
+
+  .title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 290px;
+    margin: 5px;
+  }
+
+  .hiNeighbor {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    text-align: flex-start;
+    font-family: 'Raleway', sans-serif;
+    color: #6969e9;
+    width: 200px;
+    height: 100px;
+    font-size: 32px;
+    margin: 10px;
+  }
+
+  .iconHouse{
+    font-size: 90px;
+  }
+
+  .houseIcon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .login{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0px 5px 5px 5px;
+    width: 290px;
+    height: 170px;
+  }
+
+  .login2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 290px;
+    height: 150px;
+  }
+
+  .rememberMe {
+    display: flex;
+    width: 290px;
+    height: 100px;
+  }
+
+  .rememberMeLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 145px;
+    height: 40px;
+  }
+
+  .rememberButton{
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid #7879F1;
+  }
+
+  .rememberText {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 10px;
+  }
+
+  .rememberMeRight {
+    display: flex;
+    align-items: flex-start;
+    width: 145px;
+    height: 40px;
+  }
+
+  .rememberPassword {
+    margin-left: 48px;
+    margin-top: 5px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 10px;
+  }
+
+  .loginButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    height: 265px;
+  }
+
+  /* CONTAINER BOTTOM */
+
+  .containerBottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;    
+    width: 300px;
+    height: 150px;
+  }
+
+  .detailedLines{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 35px;
+  }
+
+  .line1{
+    width: 290;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+
+  .line2{
+    width: 290;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+
+  .line3{
+    width: 290;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+
+  .line4{
+    width: 290;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+
+  .bottom{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 300px;
+    height: 115px;
+    text-align: center;
+    background-color: white;
+  }
+
+  .bottomText{
+
+    width: 300px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: 'Raleway', sans-serif;
+    color: #6969e9;
+    font-size: 10px;
+  }
+  
+  .registerButton {
+    width: 300px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .registerText {
+    font-family: 'Raleway', sans-serif;
+    color: #6969e9;
+    font-size: 10px;
+    padding: 2px 8px 2px 8px;
+    border: 1px solid blue;
+    border-radius: 30px 30px 30px 30px;
+    
+  }
