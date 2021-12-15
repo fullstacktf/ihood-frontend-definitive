@@ -2,7 +2,7 @@ import React, { useReducer, useEffect, useState } from 'react';
 import styles from './css/Signup.module.css';
 import { Icon } from '@iconify/react';
 import CheckMasterRole from './CheckRole';
-import Footer from './Footer';
+import SignupFooter from './SignupFooter';
 
 //state type
 
@@ -177,9 +177,10 @@ const SignUp = ({onSignup, onGoHomeLog}) => {
             <div className={styles.decoLine4}></div>
             <div className={styles.decoLine5}></div>
         </div>
-        <Footer onGoHomeLog={onGoHomeLog}/>
+        <SignupFooter onGoHomeLog={onGoHomeLog}/>
       </div>
   );
 }
+
 
 export default SignUp;
