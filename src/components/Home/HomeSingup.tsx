@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 import TextCarousel from './TextCarousel';
 import SignUp from '../SignUp/Signup';
 
-const HomeSignup = ({ onSignup }) => {
+const HomeSignup = ({ onSignup, onGoHomeLog }) => {
 return (
     <div className={styles.homeContainer}>
         <div className={styles.welcomeContainer}>
@@ -22,8 +22,8 @@ return (
             <div className={styles.decoLine4}></div>
             <div className={styles.decoLine5}></div>
         </div>
-        <div className={styles.signupContainer}>
-        <SignUp onSignup={onSignup}/>
+        <div className={styles.signinContainer}>
+            <SignUp onSignup={onSignup} onGoHomeLog={onGoHomeLog}/>
         </div>
     </div>
     
