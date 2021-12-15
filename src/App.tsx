@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import HomeSignup from './components/Home/HomeSingup';
-// import HomeLog from './components/Home/HomeLog';
+import HomeLog from './components/Home/HomeLog';
 
 interface User {
   nombre: string;
@@ -12,17 +12,26 @@ interface User {
   checked: boolean
 }
 
-
 function App() {
-  const[user,setUser] = useState<User>()
+  const[user, setUser] = useState<User>()
+
+  const [isLogin, onGoHomeLog] = useState()
+  
+  if(!user && isLogin){
+    return (
+      <div className="App">
+        <HomeLog />
+      </div>
+    )
+  }
     if (!user) {
       return (
         <div className="App">
-          <HomeSignup onSignup={setUser}/>
-          {/* <HomeLog /> */}
+          <HomeSignup onSignup={setUser} onGoHomeLog={onGoHomeLog}/>
         </div>
       )
     }
+    
     if(!user.community_id && user.checked === true) {
       return (
         <div className="App">
@@ -39,6 +48,7 @@ function App() {
         </div>
         )
     }
+
     if(user.community_id && user.role_id === 1) {
       return (
         <div className="App">
