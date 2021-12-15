@@ -1,16 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,400;1,600;1,700;1,800&display=swap');
 
-body{
-    background: linear-gradient(to left, #A5A6F6 40%, #bcbdfc 50%, #E9E9F9 65%);
-}
 .homeContainer {
     display: flex;
-    justify-content:space-between;
-    align-items: center;
     flex-direction: row;
-    width: 100%;
-    min-height: 100%;
-    margin: auto;
+    min-width: 100vw;
+    height: 100vh; 
 }
 
 .welcomeContainer{
@@ -18,9 +12,8 @@ body{
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    width: 75%;
-    min-height: 100vh;
-    margin: auto;
+    width: 85%;
+    height: 100%;
 }
 .welcome {
     font-family: 'Raleway', sans-serif;
@@ -46,12 +39,10 @@ body{
     display: flex;
     justify-content: space-between;
     flex-direction:row;
-    /* border: 1px solid black; */
-    min-width: 8%;
-    min-height: 100vh;
+    width: 8%;
+    height: 100vh;
 }
 .decoLinesContainer > div{
-    height: 100vh;
     border: 1px solid #7879F1;
     background: #7879F1;
     border-radius: 15px;
@@ -73,12 +64,8 @@ body{
     width: 10%;
     }
 
-.signupContainer{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-width: 25%;
-    min-height: 100vh;
+.signinContainer{
+    width: 25%;
+    height: 100%;
     background: linear-gradient(#A5A6F6 60%, #bcbdfc 70%, #E9E9F9 85%);
-    justify-content:space-between;
 }

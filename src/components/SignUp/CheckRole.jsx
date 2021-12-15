@@ -1,22 +1,14 @@
 import styles from './css/CheckRole.module.css';
 import React from 'react';
 
-const CheckMasterRole = () => {
+const CheckMasterRole = ({onCheck}) => {
     const [checked, setChecked] = React.useState(false);
 
   const handleChangeCheck = () => {
-    setChecked(!checked);
+    const newChecked = !checked
+    setChecked(newChecked);
+    onCheck(newChecked)
   };
-
-  const Checkbox = ({ label, value, onChange }) => {
-    return (
-        <label className={styles.textFormat}>
-          <input type="checkbox" checked={value} onChange={onChange}/>
-          {label}
-        </label>
-      );
-    };
-
 
     return (
       <div className={styles.checkBoxContainer}>
@@ -27,10 +19,19 @@ const CheckMasterRole = () => {
           value={checked}
           onChange={handleChangeCheck}
         />
-        <p>Is "My Value" checked? {checked.toString()}</p>
+        {/* <p>Is "My Value" checked? {checked.toString()}</p> */}
         </div>
       </div>
       );
   };
+
+  const Checkbox = ({ label, value, onChange }) => {
+    return (
+        <label className={styles.textFormat}>
+          <input type="checkbox" checked={value} onChange={onChange}/>
+          {label}
+        </label>
+      );
+    };
 
 export default CheckMasterRole

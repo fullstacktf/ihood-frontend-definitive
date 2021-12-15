@@ -5,6 +5,7 @@ import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
 import { Icon } from '@iconify/react';
+// import LoginFooter from './LoginFooter'
 
 const baseUrl="http://localhost:3001/usuarios";
 const cookies = new Cookies();
@@ -69,7 +70,7 @@ class FormLogin extends Component {
                 <Icon className="flag" icon="emojione:flag-for-united-kingdom" />
             </div>
         </div>
-        <div className="containerMiddle">
+        <div className="login">
             <div className="title">
             <div className="hiNeighbor">
                 Bienvenido a iHood!
@@ -79,57 +80,35 @@ class FormLogin extends Component {
                 <Icon className="iconHouse" icon="noto:house-with-garden" />
             </div>
             </div>
-            <div className="login">
-                <div className="form-group">
-                  <label>Usuario: </label>
-                 <br />
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="username"
-                      onChange={this.handleChange}
-                   />
-                  <br />
-                   <label>Contraseña: </label>
-                   <br />
-                 <input
-                     type="password"
-                   className="form-control"
-                      name="password"
-                      onChange={this.handleChange}
-                 />
-                 <br />
-                </div>
+            <div className="inputs">
+                <input type="text" className="form-control" name="username" placeholder="Usuario" onChange={this.handleChange}
+                />
+
+                <input type="password" className="form-control" name="password" placeholder="Contraseña" onChange={this.handleChange}
+                />
             </div>
             <div className="login2">
                 <div className="rememberMe">
-                    <div className="rememberMeLeft">
-                        <button className="rememberButton"></button>
-                        <div className="rememberText">Recuérdame</div>
-                    </div>
-                    <div className="rememberMeRight">
-                        <div className="rememberPassword">
-                        <a href="https://www.facebook.com/">¿Hás olvidado tu contraseña?</a>
-                        </div>
-                    </div>
+                    <label className="textFormat">
+                        <input type="checkbox" />Recuerdame
+                    </label>
+                    <p className="textFormat">¿Hás olvidado tu contraseña?</p>
                 </div>
-                <div className="loginButton">
-                <button className="btn btn-primary" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
-                </div>
+                <button className="loginBtn" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
             </div>
-            
+        </div>
+        <div className="decoLinesContainer">
+            <div className="decoLine1"></div>
+            <div className="decoLine2"></div>
+            <div className="decoLine3"></div>
+            <div className="decoLine4"></div>
+            <div className="decoLine5"></div>
         </div>
         <div className="containerBottom">
-            <div className="detailedLines">
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
-                <div className="line4"></div>
-            </div>
-            <div className="bottom">
-                <div className="bottomText">
+        <div className="bottom">
+                <p className="bottomText">
                     ¿No eres miembro aún?
-                </div>
+                </p>
                 <div className="registerButton">
                     <div>
                         <button className="registerText" onClick={()=> this.iniciarSesion()}>Registrate aquí</button>
@@ -137,10 +116,12 @@ class FormLogin extends Component {
                 </div>
 
             </div>
+            {/* <LoginFooter onGoHomeLog={onGoHomeLog}/> */}
         </div>
     </div>
         );
     }
 }
+
 
 export default FormLogin;

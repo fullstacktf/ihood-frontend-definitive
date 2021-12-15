@@ -1,8 +1,8 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useReducer, useEffect, useState } from 'react';
 import styles from './css/Signup.module.css';
 import { Icon } from '@iconify/react';
 import CheckMasterRole from './CheckRole';
-import Footer from './Footer';
+import SignupFooter from './SignupFooter';
 
 //state type
 
@@ -83,8 +83,10 @@ const reducer = (state: State, action: Action)  => {
 }
 
 
-const SignUp = ({onSignup}) => {
+const SignUp = ({onSignup, onGoHomeLog}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     if (state.username.trim() && state.email.trim() && state.password.trim()) {
@@ -101,7 +103,7 @@ const SignUp = ({onSignup}) => {
   }, [state.username, state.password, state.email]);
 
   const handleSignup = () => {
-    onSignup({name:"", email: "", password: "", checked:true})
+    onSignup(user)
     if (state.username === 'username' && state.email === 'name@sample.com' && state.phoneNumber === 675789876 && state.password === 'password') {
       dispatch({
         type: 'signupSuccess',
@@ -135,19 +137,15 @@ const SignUp = ({onSignup}) => {
     });
   };
 
-  // const handlePhoneNumberChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
-  //   dispatch({
-  //     type: 'setPhoneNumber',
-  //     payload: event.target.value
-  //   });
-  // };
-
   const handlePasswordChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
       dispatch({
         type: 'setPassword',
         payload: event.target.value
       });
     }
+  const handleCheckChange = (isChecked) => {
+    setUser({...user, checked: isChecked});
+  }
 
   return (
       <div className={styles.signupContainer}>
@@ -161,19 +159,16 @@ const SignUp = ({onSignup}) => {
           <Icon className= {styles.iconHouse} icon="noto:house-with-garden" />
           </div>
           <div className={styles.inputs}>
-              {/* error={state.isError} 
-              helperText={state.helperText}*/}
               <input type="text" className="username" placeholder="&#xf007;  Nombre" onChange={handleUsernameChange} onKeyPress={handleKeyPress} required/>
 
               <input type="email" className="email" placeholder="Email" onChange={handleEmailChange} onKeyPress={handleKeyPress} required/>
 
               <input type="tel" className="movil" placeholder="Telefono" onKeyPress={handleKeyPress}/>
-  {/* onChange={handlePhoneNumberChange} */}
               <input type="password" className="password" placeholder="Password" onChange={handlePasswordChange} onKeyPress={handleKeyPress} required/>
 
               <button className={styles.loginBtn} onClick={handleSignup} disabled={state.isButtonDisabled}>Registrate</button>
           </div>
-          <CheckMasterRole />
+          <CheckMasterRole onCheck={handleCheckChange}/>
         </form>
         <div className={styles.decoLinesContainer}>
             <div className={styles.decoLine1}></div>
@@ -182,9 +177,10 @@ const SignUp = ({onSignup}) => {
             <div className={styles.decoLine4}></div>
             <div className={styles.decoLine5}></div>
         </div>
-        <Footer />
+        <SignupFooter onGoHomeLog={onGoHomeLog}/>
       </div>
   );
 }
+
 
 export default SignUp;
