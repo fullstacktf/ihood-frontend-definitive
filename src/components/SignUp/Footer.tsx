@@ -1,13 +1,13 @@
 import styles from './css/Footer.module.css';
-// import HomeLog from '../Home/HomeLog'
 
 
-const Footer = () => {
+
+const Footer = ({onGoHomeLog}) => {
         return (
         <div className={styles.footer}>
             <p className={styles.textFormat}>¿Ya estás registrado en iHood? </p>
-
-            <button className={styles.loginButton} >Accede aquí</button>
+            
+            <button className={styles.loginButton} onClick={onGoHomeLog}>Accede aquí</button>
         </div>
     )    
 }
