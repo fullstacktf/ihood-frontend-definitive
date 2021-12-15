@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import HomeSignup from './components/Home/HomeSingup';
+import HomeSignup from './components/Home/HomeSignup';
 import HomeLog from './components/Home/HomeLog';
 
 interface User {
