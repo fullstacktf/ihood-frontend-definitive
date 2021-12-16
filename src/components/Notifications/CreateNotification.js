@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 import { Icon } from '@iconify/react';
-import '/home/ayose/workspace/LAMALA/Components/src/Components/Notification/css/Notification.css';
+import './css/Notification.css';
 
 const CreateNotification = () => {
   const [title, setTitle] = useState('');
