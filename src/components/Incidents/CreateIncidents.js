@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 import { Icon } from '@iconify/react';
-import '/home/ayose/workspace/LAMALA/Components/src/Components/Incidents/css/Incidents.css';
+import './css/Incidents.css';
 
 const CreateIncidents = () => {
   const [title, setTitle] = useState('');
