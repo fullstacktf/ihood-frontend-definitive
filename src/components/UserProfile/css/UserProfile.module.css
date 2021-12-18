@@ -37,12 +37,14 @@
 .calendarBox{
     width: 100%;
     height: 50%;
-
+}
+.iconBox {
+    width: 100%;
+    display: flex;
+    justify-content: start;
 }
 .iconHouse {
-    width: 30%;
-    font-size: 10rem;
-    margin-left: -18rem;
+    font-size: 12rem;
 }
 .calendar,
 .userInfo,
