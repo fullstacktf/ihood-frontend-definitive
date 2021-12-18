@@ -19,7 +19,9 @@ const UserProfile = () => {
               <div className={styles.calendarBox}>
               <CalendarEvents />
               </div>
-              <Icon className= {styles.iconHouse} icon="noto:house-with-garden" />
+              <div className={styles.iconBox}>
+                <Icon className= {styles.iconHouse} icon="noto:house-with-garden" />
+              </div>
             </div>
 
             <div className={styles.decoSingleLine}></div>
