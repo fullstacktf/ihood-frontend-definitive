@@ -151,7 +151,7 @@ export const Calendar = ({
                 // eslint-disable-next-line no-constant-condition
                 for (let week = startWeek; true; week++) {
                     const items: DateItem[] = Array(7)
-                        .fill(0)
+                        .fill(1)
                         .map<DateItem>((i, index) => {
                             const current = dayjs(basis)
                                 .clone()
@@ -162,7 +162,7 @@ export const Calendar = ({
                             const item: DateItem = {
                                 date: current.format(dateFormat ?? DATE_FORMAT),
                                 text: current.date().toString(),
-                                isHoliday: 6 === current.day(),
+                                isHoliday: 0 === current.day(),
                                 isPreviousMonth:
                                     current.month() !== basis.month() &&
                                     week === startWeek,
