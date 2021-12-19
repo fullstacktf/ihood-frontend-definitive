@@ -7,11 +7,6 @@
     align-items: center;
 }
 
-#calendar h1 {
-    color: #ee0000;
-    font-weight: 600;
-}
-
 #calendar .calendar-button {
     background-color: aquamarine;
     padding: 0.4rem 0.8rem;

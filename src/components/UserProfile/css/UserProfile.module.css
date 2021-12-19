@@ -30,7 +30,7 @@
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    color: #7879F1;
+    color: #5152C3;
     text-transform: uppercase;
     margin-top: 40px;
 }
@@ -41,7 +41,7 @@
 .iconBox {
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 .iconHouse {
     font-size: 12rem;
