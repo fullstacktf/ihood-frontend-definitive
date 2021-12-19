@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './App.css';
 import HomeSignup from './components/Home/HomeSignup';
 import HomeLog from './components/Home/HomeLog';
+import {EnterInvitation} from './components/EnterInvitation/EnterInvitation';
+import UserProfile from './components/UserProfile/UserProfile';
+import MasterProfile from './components/MasterProfile/MasterProfile';
 
 interface User {
   nombre: string;
@@ -16,7 +19,7 @@ function App() {
   const[user, setUser] = useState<User>()
 
   const [isLogin, onGoHomeLog] = useState()
-  
+
   if(!user && isLogin){
     return (
       <div className="App">
@@ -43,30 +46,22 @@ function App() {
     if(!user.community_id) {
       return (
         <div className="App">
-          <h1>Invitation-Profile</h1>
-          {/* <Invitation-Profile /> */}
+          <EnterInvitation />
         </div>
         )
     }
 
-    if(user.community_id && user.role_id === 1) {
+    if(user && isLogin && user.community_id && user.role_id === 1) {
       return (
         <div className="App">
           <h1>Master-Profile</h1>
-          {/* <Router>
-            <NavBar>
-            <Master-Profile />
-          </Router> */}
+          <MasterProfile />
         </div>
       )
     }
     return (
     <div className="App">
-      <h1>Neighbor-Profile</h1>
-      {/* <Router>
-        <NavBar>
-        <Profile />
-      </Router> */}
+          <UserProfile />
     </div>
   );
 }
