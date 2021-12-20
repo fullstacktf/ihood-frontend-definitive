@@ -22,7 +22,7 @@ return (
             <div className={styles.decoLine4}></div>
             <div className={styles.decoLine5}></div>
         </div>
-        <div className={styles.singinContainer}>
+        <div className={styles.signinContainer}>
         <Login />
         </div>
     </div>

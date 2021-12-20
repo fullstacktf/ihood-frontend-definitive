@@ -5,7 +5,6 @@ import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
 import { Icon } from '@iconify/react';
-// import LoginFooter from './LoginFooter'
 
 const baseUrl="http://localhost:3001/usuarios";
 const cookies = new Cookies();
@@ -72,13 +71,12 @@ class FormLogin extends Component {
         </div>
         <div className="login">
             <div className="title">
-            <div className="hiNeighbor">
-                Bienvenido a iHood!
-
-            </div>
-            <div className="houseIcon">
-                <Icon className="iconHouse" icon="noto:house-with-garden" />
-            </div>
+                <div className="hiNeighbor">
+                    Hola, Vecino!
+                </div>
+                <div className="houseIcon">
+                    <Icon className="iconHouse" icon="noto:house-with-garden" />
+                </div>
             </div>
             <div className="inputs">
                 <input type="text" className="form-control" name="username" placeholder="Usuario" onChange={this.handleChange}
@@ -105,7 +103,7 @@ class FormLogin extends Component {
             <div className="decoLine5"></div>
         </div>
         <div className="containerBottom">
-        <div className="bottom">
+            <div className="bottom">
                 <p className="bottomText">
                     ¿No eres miembro aún?
                 </p>
@@ -114,9 +112,7 @@ class FormLogin extends Component {
                         <button className="registerText" onClick={()=> this.iniciarSesion()}>Registrate aquí</button>
                     </div> 
                 </div>
-
             </div>
-            {/* <LoginFooter onGoHomeLog={onGoHomeLog}/> */}
         </div>
     </div>
         );

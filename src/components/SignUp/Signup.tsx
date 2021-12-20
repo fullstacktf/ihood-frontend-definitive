@@ -155,8 +155,8 @@ const SignUp = ({onSignup, onGoHomeLog}) => {
         </div>
         <form className={styles.inputContainer} noValidate autoComplete="off">
           <div className={styles.titleBox}> 
-          <h1 className={styles.title}>Hi, Neighbor! </h1>
-          <Icon className= {styles.iconHouse} icon="noto:house-with-garden" />
+            <h1 className={styles.title}>Hola, Vecino! </h1>
+            <Icon className= {styles.iconHouse} icon="noto:house-with-garden" />
           </div>
           <div className={styles.inputs}>
               <input type="text" className="username" placeholder="&#xf007;  Nombre" onChange={handleUsernameChange} onKeyPress={handleKeyPress} required/>
