@@ -1,74 +1,90 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import HomeSignup from './components/Home/HomeSignup';
-import HomeLog from './components/Home/HomeLog';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Invite } from './components/Invite/Invite'
+import Login from './components/login/login'
+import { EnterInvitation } from './components/EnterInvitation/EnterInvitation'
+import {CreateIncidents} from './components/Incidents/CreateIncidents'
+import { CreateNotification } from './components/Notifications/CreateNotification'
+import {Navbar} from './components/Navbar/Navbar';
+import {SignUp} from './components/registro/registro';
+/* import {Payment} from './components/Payment/Payment'; */
+import {Footer} from './components/Footer/Footer';
+import {Payment} from './components/Payments/payments';
+import {Myaccount} from './components/Myaccount/MyAccount';
+import {MainContextProvider} from './components/context/Main.context'
+import {ChooseRol} from './components/ChooseRol/ChooseRol';
+import {CreateCommunity} from './components/CreateCommunity/CreateCommunity';
+import {UserProfile} from './components/UserProfile/UserProfile';
+import {MasterProfile} from './components/MasterProfile/MasterProfile'
 
-interface User {
-  nombre: string;
-  email: string;
-  password: string;
-  community_id?: number;
-  role_id: number;
-  checked: boolean
-}
 
 function App() {
-  const[user, setUser] = useState<User>()
-
-  const [isLogin, onGoHomeLog] = useState()
+  return (
+    <MainContextProvider>
+      <Router>
+      <Navbar />
+        <Routes>
   
-  if(!user && isLogin){
-    return (
-      <div className="App">
-        <HomeLog />
-      </div>
-    )
-  }
-    if (!user) {
-      return (
-        <div className="App">
-          <HomeSignup onSignup={setUser} onGoHomeLog={onGoHomeLog}/>
-        </div>
-      )
-    }
-    
-    if(!user.community_id && user.checked === true) {
-      return (
-        <div className="App">
-          <h1>Create-Community-Profile</h1>
-          {/* <Create-Community-Profile /> */}
-        </div>
-      )
-    }
-    if(!user.community_id) {
-      return (
-        <div className="App">
-          <h1>Invitation-Profile</h1>
-          {/* <Invitation-Profile /> */}
-        </div>
-        )
-    }
+          <Route path="/" element={<Login />}> 
+            
+          </Route>
 
-    if(user.community_id && user.role_id === 1) {
-      return (
-        <div className="App">
-          <h1>Master-Profile</h1>
-          {/* <Router>
-            <NavBar>
-            <Master-Profile />
-          </Router> */}
-        </div>
-      )
-    }
-    return (
-    <div className="App">
-      <h1>Neighbor-Profile</h1>
-      {/* <Router>
-        <NavBar>
-        <Profile />
-      </Router> */}
-    </div>
-  );
+          <Route path="/sign-in" element={<Login />}> 
+            
+          </Route>
+
+          <Route path="/enter-invitation" element={<EnterInvitation />}> 
+            
+          </Route>
+
+          <Route path="/create-incidents" element={<CreateIncidents />}> 
+        
+          </Route>
+
+          <Route path="/create-notification" element={<CreateNotification />}> 
+            
+          </Route>
+
+          <Route path="/generate-invitation" element={<Invite />}> 
+            
+          </Route> 
+          
+          <Route path="/sign-up" element={<SignUp/>}> 
+            
+          </Route> 
+
+          <Route path="/payments" element={<Payment/>}> 
+            
+          </Route> 
+          
+          <Route path="/profile" element={<Myaccount/>}> 
+            
+          </Route> 
+          
+          <Route path="/choose-rol" element={<ChooseRol/>}> 
+            
+          </Route> 
+
+          <Route path="/create-community" element={<CreateCommunity/>}> 
+            
+          </Route> 
+          
+          <Route path="/user-profile" element={<UserProfile/>}> 
+            
+          </Route> 
+          
+          <Route path="/master-profile" element={<MasterProfile/>}> 
+            
+          </Route> 
+          
+        </Routes>
+
+        <Footer/>
+      </Router>
+    </MainContextProvider>
+  )
+  
 }
 
 export default App;
