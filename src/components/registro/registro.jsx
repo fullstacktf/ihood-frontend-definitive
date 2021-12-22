@@ -3,6 +3,7 @@ import styles from './registro.module.css'
 import { Icon } from '@iconify/react'
 import { Button } from '../Button/Button'
 import { AuthService } from '../../services/auth.service'
+import { Link } from 'react-router-dom'
 
 //state type
 
@@ -23,7 +24,9 @@ export const SignUp = () => {
 
         setuserRegistration({ ...userRegistration, [name]: value })
     }
-
+    const goToChooseRol = () => {
+        window.location = '/sign-in'
+    }
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -54,7 +57,7 @@ export const SignUp = () => {
                     </div>
                 </div>
                 <div className={styles.containerLoginMid}>
-                    <p>¡Regístrate aquí!</p>
+                    <p className= {styles.aqui}>¡Regístrate aquí!</p>
 
                     <div className={styles.inputs}>
                         <input
@@ -89,7 +92,11 @@ export const SignUp = () => {
                             onChange={handleInput}
                         />
 
-                        <Button className="registerBtn" onClick={handleSubmit}>
+                        <Button className= {styles.registerbottom} onClick={handleSubmit}>
+                            Confirmar datos de registro
+                        </Button>
+
+                        <Button className= {styles.registerbottom} onClick={goToChooseRol}>
                             Registrarse
                         </Button>
                     </div>
@@ -106,12 +113,10 @@ export const SignUp = () => {
                     <div className={styles.loginBtn}>
                         <div>
                             <div className={styles.containerLoginBottomUp}>
-                                <p>¿Ya tienes cuenta?</p>
+                                <p className= {styles.tienescuenta}>¿Ya tienes cuenta?</p>
                             </div>
                             <div className={styles.containerLoginBottomUp}>
-                                <Button className="" onClick={handleSubmit}>
-                                    ¡Entra aquí!
-                                </Button>
+                                <Link className= {styles.tienescuenta} to="/sign-in">Entra a tu cuenta</Link>
                             </div>
                         </div>
                     </div>

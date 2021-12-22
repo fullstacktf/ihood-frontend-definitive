@@ -1,43 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import styles from './payments.module.css'
 import { Icon } from '@iconify/react'
-import { Popup } from '../Popup/Popup'
+import Popup from '../Popup/Popup'
 import { PaymentsService } from '../../services/payment.service'
+import Login from '../login/login'
 
 export const Payment = () => {
-    const [isOpen, setIsOpen] = useState(false)
-
-    const togglePopup = () => {
-        setIsOpen(!isOpen)
+    const goToPaymentPage = () => {
+        window.location = '/general-payments'
     }
 
-    const Popup = (props) => {
-        const [payment, setPayment] = useState([])
+    const goToCommunityGeneralPaymentPage = () => {
+        window.location = '/community-service-payments'
+    }
 
-        useEffect(() => {
-            const onMount = async () => {
-                const data = await PaymentsService.getPaymentsData('')
-                console.log({ data })
-                setPayment(data.data)
-            }
-            onMount()
-        }, [])
-
-        const displayPaymentData = () => {
-            return payment.map((payment, index) => (
-                <div className={styles.popupBox}>
-                    <div className={styles.box}>
-                        <span
-                            className={styles.closeIcon}
-                            onClick={props.handleClose}
-                        >
-                            x
-                        </span>
-                        {props.content}
-                    </div>
-                </div>
-            ))
-        }
+    const goToExtraPaymentPage = () => {
+        window.location = '/extra-payments'
     }
 
     return (
@@ -55,35 +33,20 @@ export const Payment = () => {
                     <div>
                         <input
                             type="button"
-                            id="Pagos de la comunidad"
-                            value="Pagos de la comunidad"
+                            id="Pagos extras"
+                            value="Pago mensual"
                             className={styles.paymentsOptions}
-                            onClick={togglePopup}
+                            onClick={goToPaymentPage}
                         ></input>
-                        {isOpen && (
-                            <Popup content={<></>} handleClose={togglePopup} />
-                        )}
                     </div>
-
                     <div>
                         <input
                             type="button"
                             id="Pagos extras"
                             value="Pagos extras"
                             className={styles.paymentsOptions}
-                            onClick={togglePopup}
+                            onClick={goToExtraPaymentPage}
                         ></input>
-                        {isOpen && (
-                            <Popup
-                                content={
-                                    <>
-                                        <b>Design your Popup</b>
-                                        <p>hola</p>
-                                    </>
-                                }
-                                handleClose={togglePopup}
-                            />
-                        )}
                     </div>
 
                     <div>
@@ -92,19 +55,8 @@ export const Payment = () => {
                             id="Servicios de la comunidad"
                             value="Servicios de la comunidad"
                             className={styles.paymentsOptions}
-                            onClick={togglePopup}
+                            onClick={goToCommunityGeneralPaymentPage}
                         ></input>
-                        {isOpen && (
-                            <Popup
-                                content={
-                                    <>
-                                        <b>Design your Popup</b>
-                                        <p>hola</p>
-                                    </>
-                                }
-                                handleClose={togglePopup}
-                            />
-                        )}
                     </div>
                 </div>
             </div>

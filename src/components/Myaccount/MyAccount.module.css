@@ -13,163 +13,82 @@
     width: 100vw;
     height: 100vh;
     margin: 0;
-}
-
-.datacontainer{
-    height: 100px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.containertop{
-    width: 100%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    border-top: 2px solid black;
-
-}
-
-.containerbottom{
-    width:100%;
-    height: 50%;
-    display:flex;
-    border-top: 2px solid orangered;
-
+    border: 1px solid red;
 }
 
 
-
-.blocktop {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    border: 5px solid purple;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.caja{
-    width: 100%;
-    height: 200px;
-    border: 2px solid pink;
-    
-}
-.blockmid{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.halfContainerTop{
     width: 100%;
     height: 50%;
-    justify-content: space-around;
-    
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
 }
 
-.myaccount{
-    font-family: 'Raleway', sans-serif;
-    color: #6969e9;
-    font-size: 25px;
-    font-weight: bolder;
-    height: 100%;
+.halfContainerBottom{
     width: 100%;
-    
-}
-.usericon{
-    font-size: 30px;
-}
-
-.botones{
-    font-family: 'Raleway', sans-serif;
-    color: #6969e9;
-    font-size: 20px;
-    font-weight: bolder;
-    border: #7879F1 1px solid;
-    border-radius: 8px ;
-}
-.emailcontainer{
-    width: 450px;
+    height: 50%;
+    border: 1px solid blue;
     display: flex;
-    align-items: center;
-    flex-direction:column;
-    justify-content: space-around;
-}
-.emailedit{
-    width: 450px;
-    display: flex;
-    border-radius: 8px ;
-    margin-top: -80px;
     flex-direction: row;
-    justify-content: space-between;
-
-}
-
-.usercontainer{
-    width: 450px;
-    display: flex;
     align-items: center;
-    flex-direction:column;
-    justify-content: space-around;
-    
-}
-.useredit{
-    width: 450px;
-    display: flex;
-    border-radius: 8px ;
-    margin-top: -80px;
-    flex-direction: row;
-    justify-content: space-between;
-    
+    justify-content: center;
+    gap: 300px;
 }
 
-.passwordcontainer{
-    width: 450px;
-    display: flex;
-    align-items: center;
-    flex-direction:column;
-    justify-content: space-around;
-    
-}
-.passwordedit{
-    width: 450px;
-    display: flex;
-    border-radius: 8px ;
-    margin-top: -80px;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.inputstyle{
-    width:250px;
-    font-family: 'Raleway', sans-serif;
-    color: #6969e9;
-    font-size: 20px;
-    border: #7879F1 1px solid;
-    border-radius: 8px ;
-    margin-right: 25px;
-}
-
-.containerbottom{
+.updateDataContainer{
+    height: 400px;
+    width: 400px;
+    border: 1px solid red;
+    background-color: rgba(206, 175, 175, 0.466);
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:100%;
-    height: 15%;
-
+    justify-content: center;
+    gap: 40px;
+    border-radius: 50px;
 }
 
 
 
-.blockbottomdown{
 
-    width:100%;
-    height: 10%;
-    display:flex;
-    border-top: 2px solid yellow;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
