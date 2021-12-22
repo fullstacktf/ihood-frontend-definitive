@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,800&display=swap');
+
+*{
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+}
+.container {
+    margin:0;
+    padding:0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+}
+.blockRight{
+    height:100%;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer {
+width: 50%;
+height: 60%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2, 0, 36, 0.356) 0%, rgba(74, 84, 126, 0.26) 35%, rgba(37,69,130,1) 96%);
+}
+
+.titleNot {
+width: 80%;
+height: 80%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 40px;
+}
+
+.descNot {
+    height: 150px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.notification {
+    min-height: 200px;
+    max-width: 600px;
+}
+
+.casa{
+    font-size: 180px;
+}
+
+.blockLeftBottom{
+    width:100%;
+    height: 20%;
+}
+
+
+.Contenedores{
+    border-radius: 8px ;
+    width: 450px;
+    background-color:white;
+    margin-bottom: 50px;
+}
+
+.bell{
+    font-size:24px;
+    margin-left: 440px;
+}
+
+
+.inputTitle{
+    height: 30px;
+    width: 400px;
+    font-weight: bolder;
+    border-radius: 20px;
+    margin-top: 25px;
+    border: #ffffff 3px solid;
+    
+}
+
+.inputDesc{
+    height: 150px;
+    width: 400px;
+    font-weight: bolder;
+    border-radius: 20px;
+    margin-top: 25px;
+    border: #ffffff 3px solid;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.inputBtn{
+    font-family: 'Raleway', sans-serif;
+    color: #6969e9;
+    
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 20px;
+    margin-top: 25px;font-weight: bolder;
+    border-radius: 20px;
+    margin-top: 25px;
+    border: #ffffff 3px solid;
+    
+}
+
+.titulo{
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+
+}

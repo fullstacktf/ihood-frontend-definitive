@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    font-family: "Quicksand";
+}
+
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    width: 100vw;
+    height:50%;
+    flex-direction: row;
+    margin:0;
+    background-color: rgb(185, 185, 206);
+}
+
+.block-left-nav{
+    display: flex;
+    height: 60px;
+    width: 250px;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.iconhouse{
+    font-size: 50px;
+    margin-left: 30px;
+}
+
+.ihood-title{
+    margin-left: 30px;
+    font-size: 30px;
+    color: blue;
+    font-family: 'Raleway', sans-serif;
+}
+
+.navegador{
+    width: 100%;
+    height: 60px;
+    
+}
+
+.ysi{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    text-align: flex-end;
+    justify-content: center;
+    padding-top: 17px;
+    
+}
+
+.block-right-nav{
+    height:60px;
+    width: 1500px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+ .links{
+    font-size: 15px;
+    color:#6969e9;
+    margin-right: 100px;
+    font-family: 'Raleway', sans-serif;
+    }
