@@ -92,7 +92,7 @@ function App() {
 
                         <Route path="/payments" element={<Payment />} />
                         <Route
-                            path="/general-payments"
+                            path="/generar-payments"
                             element={<GeneralPayment />}
                         />
                         <Route
